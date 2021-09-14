@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 16:26:27 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/14 16:25:43 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/14 19:04:15 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,27 +62,55 @@ void	ft_printstacks(t_stack *a, t_stack *b)
 		i--;
 	}
 	ft_putstr_fd("- -\n", 1);
-	ft_putstr_fd("a b\n", 1);
+	ft_putstr_fd("a b\n\n\n", 1);
 }
 
+int ft_error()
+{
+	ft_putstr_fd("Error\n", 1);
+	return (EXIT_FAILURE);
+}
+
+int ft_checkargs(int ac, char **av)
+{
+	int i;
+	int j;
+
+	i = 0;
+	while (i <= ac - 2)
+	{
+		j = 0;
+		if (av[i + 1][j] == '-')
+			j++;
+		while (av[i + 1][j] <= '9' && av[i + 1][j] >= '0')
+			j++;
+		if (av[i + 1][j] != '\0')
+			return (EXIT_FAILURE);
+		i++;
+	}
+	return (EXIT_SUCCESS);
+}
 
 int	main(int ac, char **av)
 {
 	t_stack a;
 	t_stack b;
 
-	(void) av;
+	//if (ac <= 1)
+	//	return (ft_error());
+	if (ft_checkargs(ac, av) == EXIT_FAILURE)
+		return (ft_error());	
 	if (ft_allocstacks(&a, &b, ac) == EXIT_FAILURE)
-		return (EXIT_FAILURE);
+		return (ft_error());
 	if (ft_fillstacks(&a, &b, ac, av) == EXIT_FAILURE)
-		return (EXIT_FAILURE);
+		return (ft_error());
 	if (ft_hasduplicates(&a))
-		return (EXIT_FAILURE);
+		return (ft_error());
 	ft_normalize(&a, &b);
-	ft_printstacks(&a, &b);
+	//ft_printstacks(&a, &b);
 	ft_sort(&a, &b);
-	ft_printstacks(&a, &b);
-	printf("issorted:%i, len%i\n", ft_issorted(&a), a.l);
+	//ft_printstacks(&a, &b);
+	//printf("issorted:%i, len%i\n", ft_issorted(&a), a.l);
 	free(a.v);
 	free(b.v);
 	return (EXIT_SUCCESS);

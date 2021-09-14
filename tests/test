@@ -1,0 +1,5 @@
+ARG="2 1";
+echo "actions count:"
+ ./push_swap $ARG | wc -l
+ echo tester_Mac:
+ ./push_swap $ARG | ./tests/checker_Mac $ARG
