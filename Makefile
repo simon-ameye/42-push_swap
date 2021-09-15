@@ -6,7 +6,7 @@
 #    By: sameye <sameye@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/03 14:02:57 by sameye            #+#    #+#              #
-#    Updated: 2021/09/15 19:02:04 by sameye           ###   ########.fr        #
+#    Updated: 2021/09/15 20:26:18 by sameye           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRCS += push_swap_utils.c
 SRCS += normalize.c
 SRCS += radixsort.c
 SRCS += swapsort.c
+SRCS += push_swap_utils2.c
 
 OBJS_DIR = obj/
 OBJS = $(addprefix $(OBJS_DIR),$(SRCS:.c=.o))
