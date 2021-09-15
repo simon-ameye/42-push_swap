@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 19:56:46 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/13 20:11:41 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 13:00:58 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int rra(t_stack *a, t_stack *b)
 	(void) b;
 	if (a->l >= 2)
 	{
-		ft_rotatereverse(b);
+		ft_rotatereverse(a);
 		ft_putstr_fd("rra\n", 1);
 	}
 	return (EXIT_SUCCESS);

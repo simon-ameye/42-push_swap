@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 16:26:27 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/14 19:04:15 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 16:52:00 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,10 +107,13 @@ int	main(int ac, char **av)
 	if (ft_hasduplicates(&a))
 		return (ft_error());
 	ft_normalize(&a, &b);
+	//ft_radix(&a, &b);
 	//ft_printstacks(&a, &b);
-	ft_sort(&a, &b);
+	//ft_radixbase3(&a, &b);
+	//ft_swapsort(&a, &b);
+	ft_swapsort2(&a, &b);
+	//ft_improvedswapsort(&a, &b);
 	//ft_printstacks(&a, &b);
-	//printf("issorted:%i, len%i\n", ft_issorted(&a), a.l);
 	free(a.v);
 	free(b.v);
 	return (EXIT_SUCCESS);
