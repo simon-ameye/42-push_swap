@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 16:23:33 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/15 18:58:55 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 20:20:09 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ int		ft_error(void);
 int		ft_checkargs(int ac, char **av);
 int		ft_allsorted(t_stack *a, t_stack *b);
 void	ft_pushbit(t_stack *a, t_stack *b, int bitshift);
+int		ft_error_free(t_stack *a, t_stack *b);
 
 #endif

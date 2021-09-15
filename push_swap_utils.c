@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 14:26:56 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/15 19:04:53 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 20:18:03 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,4 @@ void	ft_pusha(t_stack *a, t_stack *b)
 {
 	while (b->l > 0)
 		pa(a, b);
-}
-
-int	ft_error(void)
-{
-	ft_putstr_fd("Error\n", 1);
-	return (EXIT_FAILURE);
 }

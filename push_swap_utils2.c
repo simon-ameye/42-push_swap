@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 14:26:56 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/15 19:05:00 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 20:19:54 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,17 @@ void	ft_printstacks(t_stack *a, t_stack *b)
 	}
 	ft_putstr_fd("- -\n", 1);
 	ft_putstr_fd("a b\n\n\n", 1);
+}
+
+int	ft_error(void)
+{
+	ft_putstr_fd("Error\n", 1);
+	return (EXIT_FAILURE);
+}
+
+int	ft_error_free(t_stack *a, t_stack *b)
+{
+	free(a->v);
+	free(b->v);
+	return (ft_error());
 }

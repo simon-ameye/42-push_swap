@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 16:26:27 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/15 19:06:55 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 20:20:33 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,9 @@ int	main(int ac, char **av)
 	if (ft_allocstacks(&a, &b, ac) == EXIT_FAILURE)
 		return (ft_error());
 	if (ft_fillstacks(&a, &b, ac, av) == EXIT_FAILURE)
-		return (ft_error());
+		return (ft_error_free(&a, &b));
 	if (ft_hasduplicates(&a))
-		return (ft_error());
+		return (ft_error_free(&a, &b));
 	ft_normalize(&a, &b);
 	if (ac <= 24)
 		ft_swapsort(&a, &b);
