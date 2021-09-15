@@ -6,16 +6,16 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 19:57:52 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/13 20:04:21 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 19:07:23 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_push(t_stack *from, t_stack *dst)
+int	ft_push(t_stack *from, t_stack *dst)
 {
-	int elt;
-	int i;
+	int	elt;
+	int	i;
 
 	elt = from->v[0];
 	(from->l)--;

@@ -6,16 +6,16 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 19:56:11 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/13 20:04:59 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 19:09:36 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_rotateup(t_stack *s)
+int	ft_rotateup(t_stack *s)
 {
-	int i;
-	int tmp;
+	int	i;
+	int	tmp;
 
 	tmp = s->v[0];
 	i = 0;
@@ -28,7 +28,7 @@ int ft_rotateup(t_stack *s)
 	return (EXIT_SUCCESS);
 }
 
-int ra(t_stack *a, t_stack *b)
+int	ra(t_stack *a, t_stack *b)
 {
 	(void) b;
 	if (a->l >= 2)
@@ -39,7 +39,7 @@ int ra(t_stack *a, t_stack *b)
 	return (EXIT_SUCCESS);
 }
 
-int rb(t_stack *a, t_stack *b)
+int	rb(t_stack *a, t_stack *b)
 {
 	(void) a;
 	if (b->l >= 2)
@@ -50,7 +50,7 @@ int rb(t_stack *a, t_stack *b)
 	return (EXIT_SUCCESS);
 }
 
-int rr(t_stack *a, t_stack *b)
+int	rr(t_stack *a, t_stack *b)
 {
 	if (b->l >= 2)
 		ft_rotateup(b);

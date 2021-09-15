@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 12:00:50 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/15 18:20:38 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 19:07:49 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_swapsort(t_stack *a, t_stack *b)
 {
-	int max;
-	int sent;
+	int	max;
+	int	sent;
 
 	sent = -1;
 	max = a->l - 1;
@@ -24,14 +24,14 @@ void	ft_swapsort(t_stack *a, t_stack *b)
 		if (a->v[0] > a->v[1] && a->v[0] != max && a->v[1] != max)
 			sa(a, b);
 		if (ft_issorted(a, 1) == 1)
-			break;
+			break ;
 		if (a->v[0] - sent == 1)
 		{
 			sent = a->v[0];
 			pb(a, b);
 		}
 		if (ft_issorted(a, 1) == 1)
-			break;
+			break ;
 		ra(a, b);
 	}
 	ft_pusha(a, b);

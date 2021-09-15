@@ -6,18 +6,18 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 13:23:32 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/14 16:03:33 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 19:01:48 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_normalize(t_stack *a, t_stack *b)
+void	ft_normalize(t_stack *a, t_stack *b)
 {
-	int i;
-	int j;
-	int *temp;
-	
+	int	i;
+	int	j;
+	int	*temp;
+
 	i = 0;
 	while (i <= a->l - 1)
 	{

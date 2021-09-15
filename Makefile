@@ -6,7 +6,7 @@
 #    By: sameye <sameye@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/03 14:02:57 by sameye            #+#    #+#              #
-#    Updated: 2021/09/15 17:59:36 by sameye           ###   ########.fr        #
+#    Updated: 2021/09/15 19:02:04 by sameye           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS += rotate.c
 SRCS += reverserotate.c
 SRCS += push_swap_utils.c
 SRCS += normalize.c
-SRCS += sort.c
+SRCS += radixsort.c
 SRCS += swapsort.c
 
 OBJS_DIR = obj/

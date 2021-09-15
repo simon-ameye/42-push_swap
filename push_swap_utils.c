@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 14:26:56 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/15 18:16:09 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 19:04:53 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,9 @@ int	ft_atoi_protect(const char *nptr, int *result)
 	return (EXIT_SUCCESS);
 }
 
-int	ft_max(int i, int j)
-{
-	if (i >= j)
-		return(i);
-	return (j);
-}
-
 int	ft_issorted(t_stack *s, int dir)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i <= s->l - 2)
@@ -72,8 +65,8 @@ int	ft_issorted(t_stack *s, int dir)
 
 int	ft_hasduplicates(t_stack *s)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (i <= (s->l - 2))
@@ -85,7 +78,19 @@ int	ft_hasduplicates(t_stack *s)
 				return (1);
 			j++;
 		}
-	i++;
+		i++;
 	}
 	return (0);
+}
+
+void	ft_pusha(t_stack *a, t_stack *b)
+{
+	while (b->l > 0)
+		pa(a, b);
+}
+
+int	ft_error(void)
+{
+	ft_putstr_fd("Error\n", 1);
+	return (EXIT_FAILURE);
 }
