@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 16:23:33 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/15 16:18:49 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 17:09:02 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,7 @@ int	ft_hasduplicates(t_stack *s);
 void ft_normalize(t_stack *a, t_stack *b);
 void	ft_radix(t_stack *a, t_stack *b);
 void ft_swapsort(t_stack *a, t_stack *b);
-void ft_improvedswapsort(t_stack *a, t_stack *b);
-void	ft_radixbase3(t_stack *a, t_stack *b);
 void	ft_pusha(t_stack *a, t_stack *b);
-void	ft_swapsort2(t_stack *a, t_stack *b);
 
 
 

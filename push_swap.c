@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 16:26:27 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/15 16:52:00 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 18:02:17 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,8 +96,6 @@ int	main(int ac, char **av)
 	t_stack a;
 	t_stack b;
 
-	//if (ac <= 1)
-	//	return (ft_error());
 	if (ft_checkargs(ac, av) == EXIT_FAILURE)
 		return (ft_error());	
 	if (ft_allocstacks(&a, &b, ac) == EXIT_FAILURE)
@@ -107,13 +105,10 @@ int	main(int ac, char **av)
 	if (ft_hasduplicates(&a))
 		return (ft_error());
 	ft_normalize(&a, &b);
-	//ft_radix(&a, &b);
-	//ft_printstacks(&a, &b);
-	//ft_radixbase3(&a, &b);
-	//ft_swapsort(&a, &b);
-	ft_swapsort2(&a, &b);
-	//ft_improvedswapsort(&a, &b);
-	//ft_printstacks(&a, &b);
+	if (ac <= 24)
+		ft_swapsort(&a, &b);
+	else
+		ft_radix(&a, &b);
 	free(a.v);
 	free(b.v);
 	return (EXIT_SUCCESS);

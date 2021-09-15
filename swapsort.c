@@ -6,76 +6,33 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 12:00:50 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/15 15:48:57 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 17:08:15 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_swapsort(t_stack *a, t_stack *b)
+void	ft_swapsort(t_stack *a, t_stack *b)
 {
-	int count;
-	int maxsteps;
+	int max;
+	int sent;
 
-	maxsteps = a->l - 2;
-	count = 0;
+	sent = -1;
+	max = a->l - 1;
 	while (ft_issorted(a) == 0)
 	{
-		if (a->v[0] > a->v[1])
+		if (a->v[0] > a->v[1] && a->v[0] != max && a->v[1] != max)
 			sa(a, b);
 		if (ft_issorted(a) == 1)
-			return;
-		if (count % (2 * maxsteps) < maxsteps)
-			ra(a, b);
-		else
-			rra(a, b);
-		count++;
-	}
-}
-
-/*
-int ft_shouldreverse(t_stack *a, int dir, int count)
-{
-	if (dir == 1)
-	{
-		
-	}
-}
-
-void ft_improvedswapsort(t_stack *a, t_stack *b)
-{
-	int count;
-	int maxsteps;
-	int dir;
-
-	maxsteps = a->l - 2;
-	count = 0;
-	dir = 1;
-	while (ft_issorted(a) == 0)
-	{
-		if (a->v[0] > a->v[1])
-			sa(a, b);
+			break;
+		if (a->v[0] - sent == 1)
+		{
+			sent = a->v[0];
+			pb(a, b);
+		}
 		if (ft_issorted(a) == 1)
-			return;
-
-		if (count == maxsteps)
-			dir = -1;
-		if (count == 0)
-			dir = 1;
-
-		if (ft_shouldreverse(a, dir, count));
-			dir = -dir;
-
-		if (dir == 1)
-		{
-			rra(a, b);
-			count++;
-		}
-		else
-		{
-			ra(a, b);
-			count--;
-		}
+			break;
+		ra(a, b);
 	}
+	ft_pusha(a, b);
 }
-*/
