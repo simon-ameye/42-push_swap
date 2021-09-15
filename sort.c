@@ -6,38 +6,17 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 16:12:17 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/15 11:59:49 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 18:20:07 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_maline(t_stack *a, t_stack *b)
+int	ft_allsorted(t_stack *a, t_stack *b)
 {
-	if (a->l >= 2 && b->l >= 2 && 0)
-	{
-		if (a->v[0] >= a->v[1] && b->v[0] <= b->v[1])
-		{
-			ss(a, b);
-			return;
-		}
-	}
-	if (a->l >= 2 && 0)
-	{
-		if (a->v[0] >= a->v[1])
-		{
-			sa(a, b);
-			return;
-		}
-	}
-	if (b->l >= 2 && 0)
-	{
-		if (b->v[0] >= b->v[1])
-		{
-			sb(a, b);
-			return;
-		}
-	}
+	if (ft_issorted (a, 1) == 1 && ft_issorted (b, -1))
+		return 1;
+	return (0);
 }
 
 void	ft_pushbit(t_stack *a, t_stack *b, int bitshift)
@@ -53,7 +32,8 @@ void	ft_pushbit(t_stack *a, t_stack *b, int bitshift)
 			pb(a, b);
 		else
 			ra(a, b);
-		//ft_maline(a, b);
+		if (ft_allsorted(a, b))
+			break;
 		i++;
 	}
 }
@@ -69,7 +49,7 @@ void	ft_radix(t_stack *a, t_stack *b)
 	int bitshift;
 	
 	bitshift = 0;
-	while (ft_issorted(a) == 0)
+	while (ft_issorted(a, 1) == 0)
 	{
 		ft_pushbit(a, b, bitshift);
 		//ft_printstacks(a, b);

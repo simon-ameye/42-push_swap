@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 16:23:33 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/15 17:09:02 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 18:16:25 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	sb(t_stack *a, t_stack *b);
 int	ss(t_stack *a, t_stack *b);
 int	ft_atoi_protect(const char *nptr, int *res);
 int	ft_max(int i, int j);
-int	ft_issorted(t_stack *s);
+int	ft_issorted(t_stack *s, int dir);
 int	ft_hasduplicates(t_stack *s);
 void ft_normalize(t_stack *a, t_stack *b);
 void	ft_radix(t_stack *a, t_stack *b);

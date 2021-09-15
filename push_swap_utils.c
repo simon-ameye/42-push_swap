@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 14:26:56 by sameye            #+#    #+#             */
-/*   Updated: 2021/09/14 16:10:54 by sameye           ###   ########.fr       */
+/*   Updated: 2021/09/15 18:16:09 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,15 +48,23 @@ int	ft_max(int i, int j)
 	return (j);
 }
 
-int	ft_issorted(t_stack *s)
+int	ft_issorted(t_stack *s, int dir)
 {
 	int i;
 
 	i = 0;
 	while (i <= s->l - 2)
 	{
-		if ((s->v[i]) > (s->v[i + 1]))
-			return (0);
+		if (dir >= 0)
+		{
+			if ((s->v[i]) > (s->v[i + 1]))
+				return (0);
+		}
+		else
+		{
+			if ((s->v[i]) < (s->v[i + 1]))
+				return (0);
+		}
 		i++;
 	}
 	return (1);
